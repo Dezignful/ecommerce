@@ -1,0 +1,926 @@
+:root{
+	--black: #2c2c54;
+	--orange: #ff9f1a;
+}
+*, *::after, *::before{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	text-decoration: none;
+	text-transform: capitalize;
+	transform: all .2s linear;
+}
+html{
+	font-size: 62.5%;
+	scroll-padding-top: 6rem;
+	scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-image: url(urban.png);
+}
+/*navbar starts*/
+li, a, button{
+    font-family: 'Audiowide', cursive;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fefcf2;
+    text-decoration: none;
+}
+.header1{
+    display: flex;
+    position: fixed;
+    right: 50px;
+   	justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+}
+.header2{
+    display: flex;
+    right: 50px;
+   	justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+}
+.header3{
+    display: flex;
+    right: 50px;
+   	justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+}
+.header4{
+    display: flex;
+    right: 50px;
+   	justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+}
+.header5{
+    display: flex;
+    right: 50px;
+   	justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+}
+.nav_links{
+    list-style: none;
+}
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+}
+.nav_links li a:hover{
+    color: #0088a9;
+}
+button{
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: red;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+button:hover{
+    background-color: rgba(0, 136, 169, 0.8);
+}
+/*navbar ends*/
+
+/*homepage starts*/
+.home{
+	position: relative;
+}
+.slide{
+	width: 100%;
+}
+.home .slide-container .slide{
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+	padding: 0 9%;
+	padding-top: 9rem;
+}
+.home .slide-container .slide .content{
+	flex: 1 1 40rem;
+	animation: slideContent .5s linear 1s backwards;
+}
+@keyframes slideContent{
+	0%{
+		opacity: 0;
+		transform: translateX(-10rem);
+	}
+}
+.home .slide-container .slide .image{
+	flex: 1 1 50rem;
+	padding-bottom: 15rem;
+	position: relative;
+	z-index: 0;
+}
+.home .slide-container .slide .image .shoe{
+	width: 100%;
+	transform: rotate(-35deg);
+	animation: shoe .3s linear;
+}
+@keyframes shoe{
+	0%{
+		transform: rotate(0deg) scale(.5);
+	}
+}
+.home .slide-container .slide .image .text{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	animation: shoeText .5s linear .5s backwards;
+}
+@keyframes shoeText{
+	0%{
+		opacity: 0;
+		top: -20rem;
+	}
+}
+.home .slide-container .slide .content span{
+	font-size: 25px;
+	color: #f7ede2;
+	font-family: 'Audiowide', cursive;
+}
+.home .slide-container .slide .content h3{
+	font-size: 5rem;
+	color: #ea0202;
+	font-family: 'Audiowide', cursive;
+}
+.home .slide-container .slide .content p{
+	font-size: 25px;
+	color: #ffffff;
+	padding: 5rem 0;
+	font-family: 'Squada One', cursive;
+}
+.home .slide-container:nth-child(1) .slide{
+	background-image: url("urban/1.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.home .slide-container:nth-child(2) .slide{
+	background-image: url("urban/2.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.home .slide-container:nth-child(3) .slide{
+	background-image: url("urban/3.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.home .slide-container{
+	display: none;
+}
+.home .slide-container.active{
+	display: block;
+}
+.home #prev,
+.home #next{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	border-radius: 50%;
+	z-index: 100;
+	height: 5rem;
+	width: 5rem;
+	line-height: 4.5rem;
+	font-size: 2rem;
+	color: #fdf5eb;
+	border: .2rem solid #fdf5eb;
+	cursor: pointer;
+	text-align: center;
+}
+.home #prev:hover,
+.home #next:hover{
+	color: #fdf5eb;
+	background: #ea2020;
+}
+.home #prev{
+	left: 3rem;
+}
+.home #next{
+	right: 3rem;
+}
+/*homepage ends*/
+
+/*category starts*/
+.categories{
+    margin-top: 70px;
+    padding: 50px 0px 0px 70px;
+    background-image: url("urban/15.png");
+}
+.categories .row{
+    content: "";
+    display: inline-flex;
+}
+.categories .row .col-3{
+    box-sizing: border-box;
+    float: right;
+    width: 50%;
+    padding-left: px;
+    padding-right: 60px;
+}
+.col-3{
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+.col-3 img{
+    width: 100%;
+}
+.small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    height: 100%;
+}
+/*category ends*/
+
+/*featured starts*/
+.featured-latest{
+	background-image: url(urban/12.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.col-4{
+    flex-basis: 25%;
+    padding: 0px 0px 10px 30px;
+    min-width: 150px;
+    margin-bottom: 50px; 
+    transition: transform 0.5s;
+    display: inline-grid;
+    margin: 0;
+}
+.col-4 img{
+    width: 100%;
+}
+.title{
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 100px;
+    color: #fefcf2;
+    font-size: 20px;
+    font-family: 'Audiowide', cursive;
+}
+.title::after{
+    content: '';
+    background: #ff523b;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px 0px 0px;
+    font-family: 'Audiowide', cursive;
+}
+h4{
+    color: #ffffff;
+    font-weight: normal;
+    font-size: 25px;
+    font-family: 'Squada One', cursive;
+}
+.col-4 p{
+    font-size: 20px;
+    font-family: 'Squada One', cursive;
+    color: #ffffff;
+}
+.col-4 img{
+    width: 250px;
+}
+.rating .fa{
+    color: #fefcf2;
+}
+.col-4:hover{
+    transform: translateY(-5px)
+}
+/*featured ends*/
+
+/*latest starts*/
+.col-1{
+	padding: 0px 0px 70px 0px;
+}
+.col-1 .row{
+    flex-basis: 25%;
+    min-width: 100px;
+    margin-bottom: 50px; 
+    transition: transform 0.5s;
+    display: inline-grid;
+    align-items: center;
+   	grid-auto-flow: row;
+}
+.col-1 img{
+    width: 100%;
+}
+.title{
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 100px;
+    color: #fefcf2;
+}
+.title::after{
+    content: '';
+    background: #ff523b;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+h4{
+    color: #f7ede2;
+    font-weight: normal;
+    font-family: 'Squada One', cursive;
+}
+.rating{
+	font-size: 15px;
+}
+.col-1 p{
+    font-size: 20px;
+    color: #ffffff;
+    font-family: 'Squada One', cursive;
+}
+.col-1 img{
+    width: 250px;
+}
+.rating .fa{
+    color: #ff523b;
+}
+.col-1:hover{
+    transform: translateY(-5px)
+}
+/*latest ends*/
+
+/*ad starts*/
+.small-container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.col-2 img{
+	padding-bottom: 350px;
+}
+.col-2 .offer-img{
+    max-width: 100%;
+    padding: -50px;
+    bottom: 50px;
+}
+.col-2 h2{
+    font-size: 40px;
+    line-height: 60px;
+    margin: 25x 0;
+    font-family: 'Audiowide', cursive;
+    color: #ea0202;
+}
+.col-2 p{
+	font-family: 'Squada One', cursive;
+	color: #ffffff;
+}
+.col-2 h1{
+	font-family: 'Audiowide', cursive;
+	color: #fdf5eb;
+}
+.btn{
+    display: inline-block;
+    background: #ea0202;
+    color: #fdf5eb;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;   
+    transition: background 0.5s; 
+}
+.btn:hover{
+    background: #563434;
+}
+.offer{
+    background-image: url("urbanstyle/16.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 70px 0;
+    height: 80vh;
+}
+.offer .col-2{
+    margin-top: 100px;
+    margin-left: -140px;
+    font-size: 20px;
+}
+.offer .row{
+    margin-top: 70px; 
+}
+.offer img{
+    width: 60%;
+    margin-left: 850px;
+    margin-top: -500px;
+    margin-bottom: -1060px;
+}
+/*ad ends*/
+
+/*testimonial starts*/
+.background{
+	background-image: url(urbanstyle/5.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 88%;
+}
+.testimonial .row{
+    padding-top: 100px;
+   	display: inline-grid;
+   	padding: 30px 0px 0px 125px;
+   	margin-top: 30px;
+}
+.testimonial .col-3{
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+.testimonial .col-3 img{
+    width: 80px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+.testimonial .col-3:hover{
+    transform: translateY(-10px);
+} 
+.fa.fa-quote-left{
+    font-size: 34px;
+    color: #ff523b;
+}
+.col-3 p{
+    font-size: 12px;
+    margin: 12px 0;
+    color: #ffffff;
+    font-family: 'Squada One', cursive;
+}
+.testimonial .col-3 h3{
+    font-weight: 600;
+    color: #fdf5eb;
+    font-size: 20px;
+    font-family: 'Audiowide', cursive;
+}
+/*testimonial ends*/
+
+/*brands starts*/
+.brands{
+    margin: 100px auto;
+}
+.col-5{
+    width: 160px;
+    float: left
+}
+.col-5 img{
+    width: 100%;
+    cursor: pointer;
+    padding-top: 10px
+}
+.col-5 img:hover{
+    transform: translateY(-10px);
+    transition: 0.5s;
+}
+/*brands ends*/
+
+/*footer starts*/
+.footer{
+    background-image: url(urbanstyle/16.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #8a8a8a;
+    font-size: 15px;
+    padding: 60px 0 20px;
+}
+.footer p{
+    color: #8a8a8a;
+    font-family: 'Squada One', cursive;
+}
+.footer h3{
+    color: #fff;
+    margin-bottom: 20px;
+    font-family: 'Audiowide', cursive;
+}
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+.footer-col-1{
+    flex-basis: 30%;
+    float: left;
+}
+.footer-col-2{
+    flex: 1;
+    text-align: center;
+}
+.footer-col-2 img{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+    margin-left: -180px;
+}
+.footer-col-2 p{
+	margin-left: -170px;
+	margin-top: 30px;
+	font-family: 'Squada One', cursive;
+}
+.footer-col-3, .footer-col-4{
+    flex-basis: 12%;
+    text-align: center;
+    margin-right: -60px; 
+}
+ul{
+    list-style-type: none;
+    color: #fff;
+}
+.app-logo{
+    margin-top: 20px;
+}
+.app-logo img{
+    width: 140px;
+}
+.footer hr{
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+}
+.copyright{
+    text-align: center;
+}
+li {
+	color: #b5b5b5;
+	list-style-type: none;
+}
+/*footer ends*/
+
+/*all products starts*/
+.img-background{
+	background-image: url("urban1.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.all-products{
+	font-size: 30px;
+	margin-left: 30px;
+	color: #fefcf2;
+}
+.row-2{
+	justify-content: space-between;
+	margin: 100px auto 50px;
+}
+select{
+	border: 3px solid #ff523b;
+	padding: 5px;
+	font-family: 'Squada One', cursive;
+	font-size: 15px;
+	margin-right: 35px;
+}
+select:focus{
+	outline: none;
+}
+.page-btn{
+	margin: 0 auto 80px;
+	font-size: 17.5px;
+	font-family: 'Squada One', cursive;
+}
+.page-btn span{
+	display: inline-block;
+	border: 2px solid #ff523b;
+	margin-left: 10px;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	cursor: pointer;
+	color: #ffffff;
+}
+.page-btn span:hover{
+	background: #ea2020;
+	color: #fff;
+}
+/*all products ends*/
+
+/*product details starts*/
+.single-product{
+	margin-top: 80px;
+	background-image: url("urbanstyle/9.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin-bottom: 20px;
+}
+.single-product .col-2 img{
+	padding: 0;
+}
+.single-product .col-2{
+	padding: 20px;
+}
+.single-product h4{
+	margin: 20px 0;
+	font-size: 30px;
+	font-weight: bold;
+	font-family: 'Squada One', cursive;
+	color: #fefcf2;
+}
+.single-product select{
+	display: block;
+	padding: 10px;
+	margin-top: 20px;
+	font-family: 'Squada One', cursive;
+	font-size: 15px;
+}
+.single-product input{
+	width: 50px;
+	height: 40px;
+	padding-left: 10px;
+	font-size: 20px;
+	margin-right: 10px;
+	border: 2px solid #ff523b;
+	font-family: 'Squada One', cursive;
+}
+input:focus{
+	outline: none;
+}
+.single-product .fa{
+	color: #ff523b;
+	margin-left: 10px;
+}
+.small-img-row{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	width: 100%;
+	max-width: 600px;
+}
+.small-img-col{
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+.small-img{
+	width: 100%;
+	max-width: 200px;
+	margin: 0;
+	padding: 0;
+}
+.row1{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+.col-33{
+	grid-column: 3 / 3;
+	margin-top: 120px;
+	margin-left: 20px;
+}
+.related-products{
+	display: flex;
+	margin-right: 40px;
+	justify-content: space-between;
+}
+.col-33 h1{
+	font-size: 40px;
+	font-family: 'Audiowide', cursive;
+	color: #ea2020;
+}
+.col-33 p{
+	font-size: 20px;
+	font-family: 'Squada One', cursive;
+	color: #ffffff;
+}
+.col-33 h3{
+	font-size: 30px;
+	font-family: 'Audiowide', cursive;
+	color: #fefcf2;
+}
+.row-2 h2{
+	font-size: 25px;
+	font-family: 'Audiowide', cursive;
+	color: #fefcf2;
+}
+.row-2 p{
+	font-size: 20px;
+	margin-bottom: 10px;
+	margin-right: 40px;
+	font-family: 'Squada One', cursive;
+	color: #fefcf2;
+}
+.fa-indent{
+	margin-bottom: 5px;
+}
+/*product details ends*/
+
+/*account starts*/
+.background-img{
+	background-image: url(urbanstyle/5.png);
+   	background-repeat: no-repeat;
+   	background-size: contain;
+}
+.cart-page{
+   	margin: 80px 300px 100px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.cart-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cart-info img{
+    width: 300px;
+}
+.menu-bar{
+	font-size: 20px;
+	font-family: 'Audiowide', cursive;
+}
+th{
+    text-align: left;
+    padding: 5px;
+    color: #fdf5eb;
+    background: #ea2020;
+    font-weight: normal;
+}
+td{
+    padding: 10px 5px;
+    font-size: 25px;
+    font-family: 'Squada One', cursive;
+    color: #fdf5eb;
+}
+td input{
+    width: 40px;
+    height: 35px;
+    padding: 5px;
+    font-size: 18px;
+    font-family: 'Squada One', cursive;
+    border: 2px solid #ff523b;
+}
+td p{
+	font-size: 25px;
+	margin-left: 15px;
+	margin-top: 10px;
+	font-family: 'Squada One', cursive;
+	color: #ffffff;
+}
+td a{
+    color: #ea2020;
+    font-size: 18px;
+    margin-left: 15px;
+    margin-top: 10px;
+    font-family: 'Squada One', cursive;
+}
+td img{
+    width: 50%;
+    margin-left: -5px;
+    margin-top: 10px;
+}
+.total-price{
+    display: flex;
+    justify-content: flex-end;
+}
+.total-price table{
+    border-top: 8px groove #ff523b;
+    width: 100%;
+    max-width: 400px ;
+    margin-bottom: 30px;
+}
+td:last-child{
+    text-align: right;
+}
+th:last-child{
+    text-align: right;
+}
+/*account ends*/
+
+/*contact starts*/
+#container123 {
+    width: 500px;
+    margin: 0 auto;
+  	margin-top: 150px;
+}
+.tabs {
+    display: table-cell;
+    width: 50%;
+    padding: 10px;
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #ea2020;
+    border-bottom: 0px;
+    position: relative;
+    font-size: 25px;
+    color: #fefcf2;
+    font-family: 'Squada One', cursive;
+}
+#lt{
+	background-color: #ea2020;
+}
+.tabs:hover, p{
+    cursor: pointer;
+}
+#cont{
+	width: 100%;
+    height: 300px;
+    border: 1px solid #ea2020;
+}
+.comm input{
+    display: block;
+    width: 300px;
+    margin: 20px 50px;
+    padding: 10px;
+    font-size: 15px;
+    color: #a6a6a6;
+    outline: 1px solid #545454;
+    font-family: 'Squada One', cursive;
+    border: 2px inset;
+    background-color: #140000;
+}
+input[type="submit"]{
+    width: 100px;
+    border: 2px outset;
+}
+#clear{
+    clear: both;
+}
+.comm{
+    position: absolute;
+    visibility: hidden;
+    font-size: 15px;
+    margin: 0px 45px;
+    font-family: 'Squada One', cursive;
+    color: #fefcf2;
+}
+#login{
+    visibility: visible;
+}
+.sign h3{
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px 15px;
+    font-size: 20px;
+    color: #fdf5eb;
+    font-family: 'Squada One', cursive;
+}
+.sign{
+	font-size: 20px;
+	padding: 20px 0px 0px;
+	font-family: 'Squada One', cursive;
+}
+#forgot h3{
+    display: block;
+    margin-top: 30px;
+    text-align: center;
+    margin-left: 30px;
+}
+#forgot div{
+    margin-top: 30px;
+}
+.tabs p{
+    padding: 10px 15px;
+    font-size: 20px;
+    color: #ffffff;
+}
+/*contact ends*/
+
+
+
+@media only screen and (max-width: 600px){
+	.row{
+		text-align: center;
+	}
+	.col-2, .col-3, .col-4{
+		flex-basis: 100%;
+	}
+	.single-product .row{
+		text-align: left;
+	}
+	.single-product .col-2{
+		padding: 20px 0;
+	}
+	.single-product h1{
+		font-size: 26px;
+		line-height: 32px;
+	}
+}
